@@ -1,0 +1,8 @@
+# BibliotecaCesun
+Repositorio generado para arquitectura 3 Capas. 
+
+Facilitador: Ing. Eduardo Ramirez Flores
+Asignatura: Desarrollo Rapido de Sistemas
+
+Proyecto generado por 3 equipos distintos trabajando de forma simultanea distintos componentes de la aplicacion
+
