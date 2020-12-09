@@ -31,13 +31,13 @@ namespace BibliotecaCesun.CapaDatos
             return profesorDAO;
         }
         #endregion
-        //Va a retornar un objeto del tipo empleado
+        //Va a retornar un objeto del tipo profesor
 
         public Profesor ValidarEstudiante(String matricula)
         {
             SqlConnection conexion = null;
             SqlCommand cmd = null;
-            Estudiante objProfesor = null;
+            Profesor objProfesor = null;
             SqlDataReader dr = null;
             try
             {

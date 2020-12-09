@@ -9,6 +9,7 @@ namespace BibliotecaCesun.CapaEntidades
 {
     public class Persona
     {
+        public String matricula { get; set; }
         public String nombre { get; set; }
         public String apellido { get; set; }
         public String telefono { get; set; }
@@ -19,8 +20,9 @@ namespace BibliotecaCesun.CapaEntidades
         {
 
         }
-        public Persona(string nombre, string apellido, string telefono, string email, string direccion)
+        public Persona(string matricula, string nombre, string apellido, string telefono, string email, string direccion)
         {
+            this.matricula = matricula;
             this.nombre = nombre;
             this.apellido = apellido;
             this.telefono = telefono;

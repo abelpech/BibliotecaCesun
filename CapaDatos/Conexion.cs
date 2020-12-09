@@ -34,7 +34,7 @@ namespace BibliotecaCesun.CapaDatos
         {
             SqlConnection conexionbd = new SqlConnection();
             string hostName = System.Environment.MachineName;
-            conexionbd.ConnectionString = "Data Source="+hostName+"\\SQLEXPRESS;Initial Catalog=dbmedica;Integrated Security=True";
+            conexionbd.ConnectionString = "Data Source="+hostName+"\\SQLEXPRESS;Initial Catalog=dbBiblioteca;Integrated Security=True";
             return conexionbd;
         }
     }

@@ -7,13 +7,13 @@ using BibliotecaCesun.CapaEntidades;
 
 namespace BibliotecaCesun.CapaEntidades
 {
-    public class Profesor : Persona
+    public class Bibliotecario : Persona
     {
-        public Profesor() : base()
+        public Bibliotecario() : base()
         {
             
         }
-        public Profesor(string matricula, string nombre, string apellido, string telefono, string email, string direccion) : base(matricula, nombre, apellido, telefono, email, direccion)
+        public Bibliotecario(string matricula, string nombre, string apellido, string telefono, string email, string direccion) : base(matricula, nombre, apellido, telefono, email, direccion)
         {
             this.matricula = matricula;
             this.nombre = nombre;
@@ -50,6 +50,11 @@ namespace BibliotecaCesun.CapaEntidades
         public override void pagarMulta()
         {
 
+        }
+
+        public void prestarLibro(Libro libro, Persona persona)
+        {
+            
         }
     }
 }

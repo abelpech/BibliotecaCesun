@@ -9,12 +9,11 @@ namespace BibliotecaCesun.CapaEntidades
 {
     public class Estudiante : Persona
     {
-        public String matricula { get; set; }
         public Estudiante() : base()
         {
 
         }
-        public Estudiante(string matricula, string nombre, string apellido, string telefono, string email, string direccion) : base(nombre, apellido, telefono, email, direccion)
+        public Estudiante(string matricula, string nombre, string apellido, string telefono, string email, string direccion) : base(matricula, nombre, apellido, telefono, email, direccion)
         {
             this.matricula = matricula;
             this.nombre = nombre;
