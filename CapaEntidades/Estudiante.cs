@@ -13,7 +13,7 @@ namespace BibliotecaCesun.CapaEntidades
         {
 
         }
-        public Estudiante(string matricula, string nombre, string apellido, string telefono, string email, string direccion) : base(matricula, nombre, apellido, telefono, email, direccion)
+        public Estudiante(string matricula, string nombre, string apellido, string telefono, string email, string direccion, string password) : base(matricula, nombre, apellido, telefono, email, direccion, password)
         {
             this.matricula = matricula;
             this.nombre = nombre;
@@ -21,6 +21,7 @@ namespace BibliotecaCesun.CapaEntidades
             this.telefono = telefono;
             this.email = email;
             this.direccion = direccion;
+            this.password = password;
         }
 
         public Libro pedirLibro(Libro libro)

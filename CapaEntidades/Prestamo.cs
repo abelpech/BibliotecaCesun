@@ -9,9 +9,10 @@ namespace BibliotecaCesun.CapaEntidades
 {
     class Prestamo
     {
-        public String id_prestamo { get; set; }
+        public int id_prestamo { get; set; }
         public Libro libro { get; set; }
-        public Persona persona { get; set; }
+        public Bibliotecario bibliotecario { get; set; }
+        public Persona personaPrestatario { get; set; }
         public DateTime fechaPrestamo { get; set; }
         public DateTime fechaVencimiento { get; set; }
 
@@ -20,11 +21,12 @@ namespace BibliotecaCesun.CapaEntidades
 
         }
 
-        public Prestamo(string id_prestamo, Libro libro, Persona persona, DateTime fechaPrestamo, DateTime fechaVencimiento)
+        public Prestamo(int id_prestamo, Libro libro, Bibliotecario bibliotecario, Persona personaPrestatario, DateTime fechaPrestamo, DateTime fechaVencimiento)
         {
             this.id_prestamo = id_prestamo;
             this.libro = libro;
-            this.persona = persona;
+            this.bibliotecario = bibliotecario;
+            this.personaPrestatario = personaPrestatario;
             this.fechaPrestamo = fechaPrestamo;
             this.fechaVencimiento = fechaVencimiento;
         }

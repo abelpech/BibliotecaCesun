@@ -15,12 +15,13 @@ namespace BibliotecaCesun.CapaEntidades
         public String telefono { get; set; }
         public String email { get; set; }
         public String direccion { get; set; }
+        public String password { get; set; }
 
         public Persona()
         {
 
         }
-        public Persona(string matricula, string nombre, string apellido, string telefono, string email, string direccion)
+        public Persona(string matricula, string nombre, string apellido, string telefono, string email, string direccion, string password)
         {
             this.matricula = matricula;
             this.nombre = nombre;
@@ -28,6 +29,7 @@ namespace BibliotecaCesun.CapaEntidades
             this.telefono = telefono;
             this.email = email;
             this.direccion = direccion;
+            this.password = password;
         }
 
         public virtual Libro pedirLibro(Libro libro)

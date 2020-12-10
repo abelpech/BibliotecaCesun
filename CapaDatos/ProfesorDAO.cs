@@ -26,14 +26,14 @@ namespace BibliotecaCesun.CapaDatos
             }
             else
             {
-                Debug.WriteLine("Ya se creo una instancia del objeto!");
+                Debug.WriteLine("Ya existe una instancia del objeto.");
             }
             return profesorDAO;
         }
         #endregion
         //Va a retornar un objeto del tipo profesor
 
-        public Profesor ValidarEstudiante(String matricula)
+        public Profesor AccesoSistema(String matricula, String password)
         {
             SqlConnection conexion = null;
             SqlCommand cmd = null;
@@ -45,6 +45,8 @@ namespace BibliotecaCesun.CapaDatos
                 cmd = new SqlCommand("spValidarProfesor", conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@prmMatricula", matricula);
+                cmd.Parameters.AddWithValue("@prmPassword", password);
+                cmd.Parameters.AddWithValue("@prmTipo", 2);
                 conexion.Open();
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
@@ -56,6 +58,7 @@ namespace BibliotecaCesun.CapaDatos
                     objProfesor.telefono = dr["telefono"].ToString();
                     objProfesor.email = dr["email"].ToString();
                     objProfesor.direccion = dr["direccion"].ToString();
+                    objProfesor.password = dr["password"].ToString();
                 }
             }
             catch (Exception ex)
