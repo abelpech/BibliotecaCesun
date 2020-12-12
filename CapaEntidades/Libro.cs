@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BibliotecaCesun.CapaDatos;
 
 namespace BibliotecaCesun.CapaEntidades
 {
@@ -16,7 +17,11 @@ namespace BibliotecaCesun.CapaEntidades
 
         public bool validarDisponibilidad()
         {
-            return true;
+            bool disponible = false;
+
+            disponible = LibroDAO.GetInstance().ValidarDisponibilidad(this);
+
+            return disponible;
         }
     }
 }

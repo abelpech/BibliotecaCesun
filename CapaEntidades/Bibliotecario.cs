@@ -53,9 +53,23 @@ namespace BibliotecaCesun.CapaEntidades
 
         }
 
-        public void prestarLibro(Libro libro, Persona persona)
+        public Prestamo prestarLibro(Libro libro)
         {
-            
+            Bibliotecario bibliotecario = this;
+            Prestamo prestamo = new Prestamo();
+            bool disponible = false;
+
+            disponible = libro.validarDisponibilidad();
+            if (disponible)
+            {
+                prestamo.libro = libro;
+                prestamo.bibliotecario = bibliotecario;
+
+            } else {
+                prestamo = null;
+            }
+
+            return prestamo;
         }
     }
 }
