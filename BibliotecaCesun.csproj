@@ -64,6 +64,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="CapaDatos\BibliotecarioDAO.cs" />
+    <Compile Include="CapaDatos\LibroDAO.cs" />
+    <Compile Include="CapaDatos\PrestamoDAO.cs" />
     <Compile Include="CapaDatos\ProfesorDAO.cs" />
     <Compile Include="CapaDatos\EstudianteDAO.cs" />
     <Compile Include="CapaDatos\Conexion.cs" />

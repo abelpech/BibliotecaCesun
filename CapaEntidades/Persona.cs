@@ -32,10 +32,18 @@ namespace BibliotecaCesun.CapaEntidades
             this.password = password;
         }
 
-        public virtual Libro pedirLibro(Libro libro)
+        public virtual Libro pedirLibro(Bibliotecario bibliotecario, Libro libro)
         {
+            Prestamo prestamo = null;
             bool disponible = false;
-            disponible = libro.validarDisponibilidad();
+
+            prestamo = bibliotecario.prestarLibro(libro);
+            if(prestamo != null)
+            {
+                prestamo.personaPrestatario = this;
+                prestamo.fechaVencimiento = DateTime.Today.AddDays(7);
+            }
+
             return libro;
         }
 
